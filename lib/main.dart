@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-'package:syren_front_end/navpages/homePage.dart';
+import 'package:syren_front_end/navpages/homePage.dart';
 import 'package:syren_front_end/navpages/searchPage.dart';
 import 'package:syren_front_end/navpages/splashPage.dart';
 

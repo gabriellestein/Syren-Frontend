@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iminpain/navpages/map.dart';
-import 'package:iminpain/navpages/map.dart';
-import 'package:iminpain/navpages/map.dart';
 import 'package:syren_front_end/navpages/homePage.dart';
 import 'package:syren_front_end/navpages/searchPage.dart';
 import 'package:syren_front_end/navpages/splashPage.dart';
