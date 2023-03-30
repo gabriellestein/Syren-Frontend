@@ -4,6 +4,11 @@
         android:label="syren_front_end"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+       <!-- Google Maps API Key (Austin's, authorized for this app) -->
+       <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyAVXSdiyzTGvZ5VoJIUxGTxjuaV2MMCYP0"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
