@@ -75,11 +75,11 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Verdana
+    - family: verdana
       fonts:
-        - asset: fonts/verdana.ttf
-        - asset: fonts/verdana-bold.ttf
-        - asset: fonts/verdana-bold-italic.ttf
+        - asset: fonts/Verdana/verdana.ttf
+        - asset: fonts/Verdana/verdana-bold.ttf
+        - asset: fonts/Verdana/verdana-bold-italic.ttf
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf

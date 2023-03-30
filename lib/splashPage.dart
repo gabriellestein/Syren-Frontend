@@ -39,6 +39,7 @@ class _splashPageState extends State<splashPage> {
               child: Text(
                 'syren - coming soon', style: TextStyle(
                   fontSize: 24,
+                  fontFamily: 'verdana',
                   fontWeight: FontWeight.bold
               ),
 
