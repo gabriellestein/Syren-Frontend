@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'emergencynums.dart';
+import 'prep.dart';
 import '../widgets/appTextLarge.dart';
 
 class LandingPage extends StatefulWidget {
@@ -65,8 +66,8 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
               child: TabBarView(
                 controller: _tabController,
                 children: [
-                  Text("Here will be a main page of featured how-to guides"),
-                  Text("Emergency phone numbers: (ex: Poison control, etc"),
+                  PrepPage(),
+                  NumPage(),
                   Text("Here will be a list of important items for to-go/bug-out bags")
                 ],
               )
