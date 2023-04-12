@@ -33,7 +33,7 @@ test:
   artifacts:
     name: coverage
     paths:
-      - $CI_PROJECT_DIR/coverage
+      - $CI_PROJECT_DIR/assets
     reports:
       junit: report.xml
 
