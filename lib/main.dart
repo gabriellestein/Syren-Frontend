@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:syren_front_end/navpages/homePage.dart';
 import 'package:syren_front_end/navpages/searchPage.dart';
 import 'package:syren_front_end/navpages/splashPage.dart';
-import 'package:syren_front_end/backEndInterfaceScripts/Interface.dart';
+//import 'package:syren_front_end/backEndInterfaceScripts/Interface.dart';
 
 void main() {
   runApp(const MyApp());
-  Interface i = Interface();
 }
 
 class MyApp extends StatelessWidget {
