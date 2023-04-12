@@ -22,23 +22,33 @@ class Interface {
   // it's also private, so it can only be called in this class
   Interface._internal()
   {
-    Future<Map<String, dynamic>> data = _openFile();
-    _initializeList(data);
+    _initializeList();
   }
 
   // Open currentData.json
   Future<Map<String, dynamic>> _openFile() async
   {
     var jsonText = await rootBundle.loadString('assets/currentData.json');
-    Map<String, dynamic> data = json.decode(jsonText);
-    print(data['ChIJbVM-gxjorokRxzwFbWlM-T4']);
-    return data;
+    Map<String, dynamic> rawData;
+    rawData = json.decode(jsonText);
+    return rawData;
   }
 
   //Create list of place objects from json objects
-  void _initializeList(Future<Map<String, dynamic>> data)
+  void _initializeList() async
   {
-
+    Map<String, dynamic> data = await _openFile();
+    for(Map<String,dynamic> value in data.values) {
+      Place place = Place();
+      place.name = value.values.elementAt(0);
+      Map<String, dynamic> latLong = jsonDecode(value.values.elementAt(1));
+      place.lat = latLong.values.elementAt(0);
+      place.long = latLong.values.elementAt(1);
+      place.phone = value.values.elementAt(2);
+      place.url = value.values.elementAt(3);
+      place.placeID = value.values.elementAt(4);
+      _places.add(place);
+    }
   }
 
   List<Place> getPlaces() { return _places; }
@@ -46,27 +56,14 @@ class Interface {
 
 class Place
 {
-  String _name = '';
-  int _lat = 0;
-  int _long = 0;
-  String _phone = '';
-  String _url = '';
-  String _placeId = '';
+  String name = '';
+  int lat = 0;
+  int long = 0;
+  String phone = '';
+  String url = '';
+  String placeID = '';
 
-  Place(String name, int lat, int long, String phone, String url, String placeId)
+  Place()
   {
-    this._name = name;
-    this._lat = lat;
-    this._long = long;
-    this._phone = phone;
-    this._url = url;
-    this._placeId = placeId;
   }
-
-  String getName() { return _name; }
-  int getLatitude() { return _lat; }
-  int getLongitude() { return _long; }
-  String getPhoneNumber() { return _phone; }
-  String getPlaceURL() { return _url; }
-  String getPlaceID() { return _placeId; }
 }
