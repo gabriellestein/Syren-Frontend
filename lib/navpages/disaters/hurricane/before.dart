@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 
-class BeforeTPage extends StatelessWidget {
+class BeforeHPage extends StatelessWidget {
   final _controller = PageController();
 
   @override
   Widget build(BuildContext context) {
-    const title = 'Preparing for a Tornado';
+    const title = 'Preparing for a Hurricane';
 
     return MaterialApp(
       title: title,
@@ -30,31 +30,25 @@ class BeforeTPage extends StatelessWidget {
                 Container(
                     padding: EdgeInsets.all(16.0),
                     alignment: Alignment.centerLeft,
-                    child: Text("Know your area’s tornado risk. In the U.S., the Midwest and the Southeast have a greater risk for tornadoes.",
+                    child: Text("Know Your Hurricane Risk. Hurricanes are not just a coastal problem. Find out how rain, wind, water and even tornadoes could happen far inland from where a hurricane or tropical storm makes landfall.",
                       style: TextStyle(fontSize: 35),)
                 ),
                 Container(
                     padding: EdgeInsets.all(16.0),
                     alignment: Alignment.centerLeft,
-                    child: Text("Know the signs of a tornado, including a rotating, funnel-shaped cloud, an approaching cloud of debris, or a loud roar like a freight train.",
+                    child: Text("Make sure everyone in your household knows and understands your hurricane plans. Include the office, kids’ day care, and anywhere else you frequent in your hurricane plans.",
                       style: TextStyle(fontSize: 35),)
                 ),
                 Container(
                     padding: EdgeInsets.all(16.0),
                     alignment: Alignment.centerLeft,
-                    child: Text("Pay attention to weather reports. Meteorologists can predict when conditions might be right for a tornado.",
+                    child: Text("You may have to evacuate quickly due to a hurricane if you live in an evacuation zone. Learn your evacuation routes, practice with your household and pets, and identify where you will stay.",
                       style: TextStyle(fontSize: 35),)
                 ),
                 Container(
                     padding: EdgeInsets.all(16.0),
                     alignment: Alignment.centerLeft,
-                    child: Text("Identify and practice going to a safe shelter such as a safe room built using FEMA criteria or a storm shelter built to ICC 500 standards. The next best protection is a small, interior, windowless room or basement on the lowest level of a sturdy building.",
-                      style: TextStyle(fontSize: 30),)
-                ),
-                Container(
-                    padding: EdgeInsets.all(16.0),
-                    alignment: Alignment.centerLeft,
-                    child: Text("Prepare for long-term stay at home or sheltering in place by gathering emergency supplies, cleaning supplies, non-perishable foods, water, medical supplies and medication.",
+                    child: Text("Have enough supplies for your household, include medication, disinfectant supplies and pet supplies in your go bag or car trunk. You may not have access to these supplies for days or even weeks after a hurricane.",
                       style: TextStyle(fontSize: 35),)
                 ),
               ],
@@ -64,7 +58,7 @@ class BeforeTPage extends StatelessWidget {
           // dot indicators
           SmoothPageIndicator(
             controller: _controller,
-            count: 5,
+            count: 4,
             effect: JumpingDotEffect(
               activeDotColor: Colors.red,
               dotColor: Colors.red.shade100,

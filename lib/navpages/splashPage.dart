@@ -35,10 +35,20 @@ class _splashPageState extends State<splashPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(height:100, width:100, color:  Colors.pink,),
+            Container(
+              height:100,
+              width:100,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                  image: AssetImage('assets/images/logo.png'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
             Container(
               child: Text(
-                'syren - coming soon', style: TextStyle(
+                'Syren', style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold
               ),

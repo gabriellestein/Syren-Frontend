@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'emergencynums.dart';
+import 'navpages/welcome.dart';
 import 'prep.dart';
 import '../widgets/appTextLarge.dart';
 
@@ -23,8 +24,6 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
             padding: const EdgeInsets.only(top:70, left: 20),
             child: Row(
               children: [
-                Icon(Icons.menu, size: 30, color: Colors.black54),
-                Expanded(child: Container()),
                 Container(
                   margin: const EdgeInsets.only(right: 20),
                   width: 50,
@@ -32,7 +31,10 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
 
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey.withOpacity(0.5),
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/logo.png'),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 )
               ],
@@ -41,7 +43,7 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
           SizedBox(height: 40,),
           Container(
             margin: const EdgeInsets.only(left: 20),
-            child: LargeText(text: "Welcome"),
+            child: LargeText(text: "SYREN"),
           ),
           SizedBox(height: 30,),
           //tab
@@ -61,12 +63,12 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
             ),
           ),
           Container(
-              height: 300,
+              height: 350,
               width: double.maxFinite,
               child: TabBarView(
                 controller: _tabController,
                 children: [
-                  PrepPage(),
+                  WelcomePage(),
                   NumPage(),
                   Text("Here will be a list of important items for to-go/bug-out bags")
                 ],

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'disaters/tornado/tornado.dart';
-
 
 class NumPage extends StatelessWidget {
   const NumPage({Key? key}) : super(key: key);
