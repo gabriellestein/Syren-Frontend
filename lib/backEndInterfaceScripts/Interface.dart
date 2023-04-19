@@ -5,21 +5,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import 'package:path_provider/path_provider.dart';
 
 class Interface {
   static final Interface _instance = Interface._internal();
 
-  late List<Place> _places;
-  // using a factory is important
-  // because it promises to return _an_ object of this type
-  // but it doesn't promise to make a new one.
+  static final List<Place> places = [];
+
+
+
   factory Interface() {
     return _instance;
   }
 
-  // This named constructor is the "real" constructor
-  // It'll be called exactly once, by the static property assignment above
-  // it's also private, so it can only be called in this class
+
   Interface._internal()
   {
     _initializeList();
@@ -28,7 +27,11 @@ class Interface {
   // Open currentData.json
   Future<Map<String, dynamic>> _openFile() async
   {
-    var jsonText = await rootBundle.loadString('assets/currentData.json');
+    Directory d = await getApplicationSupportDirectory();
+    String dataFilePath = d.path;
+    File file = File(dataFilePath + "/currentData.json");
+    var jsonText = await file.readAsString();
+    //var jsonText = await rootBundle.loadString('assets/currentData.json');
     Map<String, dynamic> rawData;
     rawData = json.decode(jsonText);
     return rawData;
@@ -40,28 +43,63 @@ class Interface {
     Map<String, dynamic> data = await _openFile();
     for(Map<String,dynamic> value in data.values) {
       Place place = Place();
-      place.name = value.values.elementAt(0);
-      Map<String, dynamic> latLong = jsonDecode(value.values.elementAt(1));
-      place.lat = latLong.values.elementAt(0);
-      place.long = latLong.values.elementAt(1);
-      place.phone = value.values.elementAt(2);
-      place.url = value.values.elementAt(3);
-      place.placeID = value.values.elementAt(4);
-      _places.add(place);
+      for(MapEntry<String,dynamic> m in value.entries) {
+        switch(m.key) {
+          case "name":
+            place.name = m.value;
+            break;
+          case "lat":
+            place.lat = double.parse(m.value);
+            break;
+          case "long":
+            place.long = double.parse(m.value);
+            break;
+          case "types":
+            place.types = m.value;
+            break;
+          case "place_id":
+            place.placeID = m.value;
+            break;
+          case "local_phone_number":
+            place.phone = m.value;
+            break;
+          case "address":
+            place.address = m.value;
+            break;
+          case "url":
+            place.url = m.value;
+            break;
+          case "rating":
+            place.rating = m.value;
+            break;
+          case "wheelchair_accessible_entrance":
+            place.wheelchairAccessible = m.value;
+            break;
+        }
+      }
+      places.add(place);
+    }
+    for(Place p in places) {
+      if(p.types.contains('food'))
+        print(p.name);
     }
   }
 
-  List<Place> getPlaces() { return _places; }
+  List<Place> getPlaces() { return places; }
 }
 
 class Place
 {
   String name = '';
-  int lat = 0;
-  int long = 0;
-  String phone = '';
-  String url = '';
+  double lat = 0;
+  double long = 0;
+  String types = '';
   String placeID = '';
+  String phone = '';
+  String address = '';
+  String url = '';
+  String rating = '';
+  String wheelchairAccessible = '';
 
   Place()
   {

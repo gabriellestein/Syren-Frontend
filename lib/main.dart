@@ -2,10 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:syren_front_end/navpages/homePage.dart';
 import 'package:syren_front_end/navpages/searchPage.dart';
 import 'package:syren_front_end/navpages/splashPage.dart';
-//import 'package:syren_front_end/backEndInterfaceScripts/Interface.dart';
+import 'package:syren_front_end/backEndInterfaceScripts/Interface.dart';
+import 'package:syren_front_end/backEndInterfaceScripts/UpdateData.dart';
 
 void main() {
   runApp(const MyApp());
+  getPermission();
+  Interface i = Interface();
+}
+
+void getPermission() async {
+  await FetchData();
 }
 
 class MyApp extends StatelessWidget {
