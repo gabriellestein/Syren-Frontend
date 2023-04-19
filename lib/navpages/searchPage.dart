@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-//This will be a settings page
+
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);
 
@@ -8,7 +8,7 @@ class SearchPage extends StatelessWidget {
     return Container(
         child:Center(
           child: Text(
-              "This is a settings page"
+              "SearchPage"
           ),
         )
     );
