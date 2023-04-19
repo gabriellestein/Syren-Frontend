@@ -48,7 +48,7 @@ class _MainPageState extends State<MainPage> {
             BottomNavigationBarItem(label:("Home"),icon: Icon(Icons.house_outlined)),
             BottomNavigationBarItem(label:("Guides"),icon: Icon(Icons.format_list_bulleted_rounded)),
             BottomNavigationBarItem(label:("Map"),icon: Icon(Icons.add_location_alt_rounded)),
-            BottomNavigationBarItem(label:("Search"),icon: Icon(Icons.search)),
+            BottomNavigationBarItem(label:("Settings"),icon: Icon(Icons.app_settings_alt)),
           ]
       ),
     );

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 
-class DuringTPage extends StatelessWidget {
+class AfterSPage extends StatelessWidget {
   final _controller = PageController();
 
   @override
   Widget build(BuildContext context) {
-    const title = 'Staying Safe During a Tornado';
+    const title = 'Staying Safe After a Thunderstorm';
 
     return MaterialApp(
       title: title,
@@ -30,26 +30,14 @@ class DuringTPage extends StatelessWidget {
                   Container(
                       padding: EdgeInsets.all(16.0),
                       alignment: Alignment.centerLeft,
-                      child: Text("Immediately go to a safe location that you have identified.",
+                      child: Text("Pay attention to authorities and weather forecasts for information on whether it is safe to go outside and instructions regarding potential flash flooding.",
                         style: TextStyle(fontSize: 35),)
                   ),
                   Container(
                       padding: EdgeInsets.all(16.0),
                       alignment: Alignment.centerLeft,
-                      child: Text("Pay attention to EAS, NOAA Weather Radio, or local alerting systems for current emergency information and instructions.",
+                      child: Text("Watch for fallen power lines and trees. Report them immediately.",
                         style: TextStyle(fontSize: 35),)
-                  ),
-                  Container(
-                      padding: EdgeInsets.all(16.0),
-                      alignment: Alignment.centerLeft,
-                      child: Text("Protect yourself by covering your head or neck with your arms and putting materials such as furniture and blankets around or on top of you.",
-                        style: TextStyle(fontSize: 35),)
-                  ),
-                  Container(
-                      padding: EdgeInsets.all(16.0),
-                      alignment: Alignment.centerLeft,
-                      child: Text("Do not try to outrun a tornado in a vehicle if you are in a car. If you are in a car or outdoors and cannot get to a building, cover your head and neck with your arms and cover your body with a coat or blanket, if possible.",
-                        style: TextStyle(fontSize: 30),)
                   ),
                 ],
               ),
@@ -58,14 +46,13 @@ class DuringTPage extends StatelessWidget {
             // dot indicators
             SmoothPageIndicator(
               controller: _controller,
-              count: 4,
+              count: 2,
               effect: JumpingDotEffect(
                 activeDotColor: Colors.red,
                 dotColor: Colors.red.shade100,
                 dotHeight: 30,
                 dotWidth: 30,
                 spacing: 16,
-                //verticalOffset: 50,
                 jumpScale: 3,
               ),
             ),

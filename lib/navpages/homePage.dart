@@ -66,8 +66,25 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
               child: TabBarView(
                 controller: _tabController,
                 children: [
+
                   PrepPage(),
                   NumPage(),
+
+                  Container(
+                    width: 200,
+                    height: 300,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      image: DecorationImage(
+                        image: AssetImage(
+                            "flood.jpg)"
+                        )
+                      ),
+                    ),
+                  ),
+                  Text("Emergency phone numbers: (ex: Poison control, etc"),
+
                   Text("Here will be a list of important items for to-go/bug-out bags")
                 ],
               )

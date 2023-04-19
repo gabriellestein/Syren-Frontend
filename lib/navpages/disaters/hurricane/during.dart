@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 
-class DuringTPage extends StatelessWidget {
+class DuringHPage extends StatelessWidget {
   final _controller = PageController();
 
   @override
   Widget build(BuildContext context) {
-    const title = 'Staying Safe During a Tornado';
+    const title = 'Staying Safe During a Hurricane';
 
     return MaterialApp(
       title: title,
@@ -30,26 +30,20 @@ class DuringTPage extends StatelessWidget {
                   Container(
                       padding: EdgeInsets.all(16.0),
                       alignment: Alignment.centerLeft,
-                      child: Text("Immediately go to a safe location that you have identified.",
+                      child: Text("Pay attention to emergency information and alerts. If you live in a mandatory evacuation zone and local officials tell you to evacuate, do so immediately.",
                         style: TextStyle(fontSize: 35),)
                   ),
                   Container(
                       padding: EdgeInsets.all(16.0),
                       alignment: Alignment.centerLeft,
-                      child: Text("Pay attention to EAS, NOAA Weather Radio, or local alerting systems for current emergency information and instructions.",
-                        style: TextStyle(fontSize: 35),)
-                  ),
-                  Container(
-                      padding: EdgeInsets.all(16.0),
-                      alignment: Alignment.centerLeft,
-                      child: Text("Protect yourself by covering your head or neck with your arms and putting materials such as furniture and blankets around or on top of you.",
-                        style: TextStyle(fontSize: 35),)
-                  ),
-                  Container(
-                      padding: EdgeInsets.all(16.0),
-                      alignment: Alignment.centerLeft,
-                      child: Text("Do not try to outrun a tornado in a vehicle if you are in a car. If you are in a car or outdoors and cannot get to a building, cover your head and neck with your arms and cover your body with a coat or blanket, if possible.",
+                      child: Text("Take refuge in a designated storm shelter or an interior room for high winds. Go to the highest level of the building if you are trapped by flooding. Do not climb into a closed attic. You may become trapped by rising flood water.",
                         style: TextStyle(fontSize: 30),)
+                  ),
+                  Container(
+                      padding: EdgeInsets.all(16.0),
+                      alignment: Alignment.centerLeft,
+                      child: Text("Do not walk, swim or drive through flood waters. Turn Around. Don’t Drown! Just six inches of fast-moving water can knock you down, and one foot of moving water can sweep your vehicle away.",
+                        style: TextStyle(fontSize: 35),)
                   ),
                 ],
               ),
@@ -58,7 +52,7 @@ class DuringTPage extends StatelessWidget {
             // dot indicators
             SmoothPageIndicator(
               controller: _controller,
-              count: 4,
+              count: 3,
               effect: JumpingDotEffect(
                 activeDotColor: Colors.red,
                 dotColor: Colors.red.shade100,
