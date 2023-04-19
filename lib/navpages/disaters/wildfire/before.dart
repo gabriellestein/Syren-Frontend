@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 
-class BeforeTPage extends StatelessWidget {
+class BeforeWPage extends StatelessWidget {
   final _controller = PageController();
 
   @override
   Widget build(BuildContext context) {
-    const title = 'Preparing for a Tornado';
+    const title = 'Preparing for a Wildfire';
 
     return MaterialApp(
       title: title,
@@ -30,31 +30,31 @@ class BeforeTPage extends StatelessWidget {
                 Container(
                     padding: EdgeInsets.all(16.0),
                     alignment: Alignment.centerLeft,
-                    child: Text("Know your area’s tornado risk. In the U.S., the Midwest and the Southeast have a greater risk for tornadoes.",
+                    child: Text("Make sure everyone in your household knows and understands what to do if you need to quickly evacuate.",
                       style: TextStyle(fontSize: 35),)
                 ),
                 Container(
                     padding: EdgeInsets.all(16.0),
                     alignment: Alignment.centerLeft,
-                    child: Text("Know the signs of a tornado, including a rotating, funnel-shaped cloud, an approaching cloud of debris, or a loud roar like a freight train.",
+                    child: Text("Make sure your insurance policies and personal documents, like ID, are up to date. Make copies and keep them in a secure password-protected digital space.",
                       style: TextStyle(fontSize: 35),)
                 ),
                 Container(
                     padding: EdgeInsets.all(16.0),
                     alignment: Alignment.centerLeft,
-                    child: Text("Pay attention to weather reports. Meteorologists can predict when conditions might be right for a tornado.",
-                      style: TextStyle(fontSize: 35),)
-                ),
-                Container(
-                    padding: EdgeInsets.all(16.0),
-                    alignment: Alignment.centerLeft,
-                    child: Text("Identify and practice going to a safe shelter such as a safe room built using FEMA criteria or a storm shelter built to ICC 500 standards. The next best protection is a small, interior, windowless room or basement on the lowest level of a sturdy building.",
+                    child: Text("Use fire-resistant materials to build, renovate or make repairs. Find an outdoor water source with a hose that can reach any area of your property. Create a fire-resistant zone that is free of leaves, debris or flammable materials for at least 30 feet from your home.",
                       style: TextStyle(fontSize: 30),)
                 ),
                 Container(
                     padding: EdgeInsets.all(16.0),
                     alignment: Alignment.centerLeft,
-                    child: Text("Prepare for long-term stay at home or sheltering in place by gathering emergency supplies, cleaning supplies, non-perishable foods, water, medical supplies and medication.",
+                    child: Text("Designate a room that can be closed off from outside air. Close all doors and windows. Set up a portable air cleaner to keep indoor pollution levels low when smoky conditions exist.",
+                      style: TextStyle(fontSize: 35),)
+                ),
+                Container(
+                    padding: EdgeInsets.all(16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text("You may have to evacuate quickly due to a wildfire. Learn your evacuation routes, practice with household, pets and identify where you will go.",
                       style: TextStyle(fontSize: 35),)
                 ),
               ],

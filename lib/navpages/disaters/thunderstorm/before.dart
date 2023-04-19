@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 
-class BeforeTPage extends StatelessWidget {
+class BeforeSPage extends StatelessWidget {
   final _controller = PageController();
 
   @override
   Widget build(BuildContext context) {
-    const title = 'Preparing for a Tornado';
+    const title = 'Preparing for a ThunderStorm';
 
     return MaterialApp(
       title: title,
@@ -30,31 +30,19 @@ class BeforeTPage extends StatelessWidget {
                 Container(
                     padding: EdgeInsets.all(16.0),
                     alignment: Alignment.centerLeft,
-                    child: Text("Know your area’s tornado risk. In the U.S., the Midwest and the Southeast have a greater risk for tornadoes.",
+                    child: Text("Know your area’s risk for thunderstorms. In most places they can occur year-round and at any hour. Sign up for your community’s warning system.",
                       style: TextStyle(fontSize: 35),)
                 ),
                 Container(
                     padding: EdgeInsets.all(16.0),
                     alignment: Alignment.centerLeft,
-                    child: Text("Know the signs of a tornado, including a rotating, funnel-shaped cloud, an approaching cloud of debris, or a loud roar like a freight train.",
+                    child: Text("Cut down or trim trees that may be in danger of falling on your home. Consider buying surge protectors, lightning rods or a lightning protection system to protect your home, appliances and electronic devices.",
                       style: TextStyle(fontSize: 35),)
                 ),
                 Container(
                     padding: EdgeInsets.all(16.0),
                     alignment: Alignment.centerLeft,
-                    child: Text("Pay attention to weather reports. Meteorologists can predict when conditions might be right for a tornado.",
-                      style: TextStyle(fontSize: 35),)
-                ),
-                Container(
-                    padding: EdgeInsets.all(16.0),
-                    alignment: Alignment.centerLeft,
-                    child: Text("Identify and practice going to a safe shelter such as a safe room built using FEMA criteria or a storm shelter built to ICC 500 standards. The next best protection is a small, interior, windowless room or basement on the lowest level of a sturdy building.",
-                      style: TextStyle(fontSize: 30),)
-                ),
-                Container(
-                    padding: EdgeInsets.all(16.0),
-                    alignment: Alignment.centerLeft,
-                    child: Text("Prepare for long-term stay at home or sheltering in place by gathering emergency supplies, cleaning supplies, non-perishable foods, water, medical supplies and medication.",
+                    child: Text("Create an emergency plan so that you and your family know what to do, where to go and what you will need to protect yourselves from the effects of a thunderstorm. Identify sturdy buildings close to where you live, work, study and play.",
                       style: TextStyle(fontSize: 35),)
                 ),
               ],
@@ -64,7 +52,7 @@ class BeforeTPage extends StatelessWidget {
           // dot indicators
           SmoothPageIndicator(
             controller: _controller,
-            count: 5,
+            count: 3,
             effect: JumpingDotEffect(
               activeDotColor: Colors.red,
               dotColor: Colors.red.shade100,
