@@ -31,7 +31,7 @@ class AfterHPage extends StatelessWidget {
                       padding: EdgeInsets.all(16.0),
                       alignment: Alignment.centerLeft,
                       child: Text("Be careful during clean up. Wear protective clothing, use appropriate face coverings or masks if cleaning mold or other debris. People with asthma and other lung conditions and/or immune suppression should not enter buildings with indoor water leaks or mold growth that can be seen or smelled, even if these individuals are not allergic to mold. Children should not help with disaster cleanup work.",
-                        style: TextStyle(fontSize: 25),)
+                        style: TextStyle(fontSize: 30),)
                   ),
                   Container(
                       padding: EdgeInsets.all(16.0),
