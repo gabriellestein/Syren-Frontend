@@ -79,10 +79,6 @@ class Interface {
       }
       places.add(place);
     }
-    for(Place p in places) {
-      if(p.types.contains('food'))
-        print(p.name);
-    }
   }
 
   List<Place> getPlaces() { return places; }

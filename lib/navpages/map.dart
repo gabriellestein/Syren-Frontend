@@ -8,6 +8,8 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 
 class MapPage extends StatefulWidget {
   const MapPage({Key? key}) : super(key: key);
@@ -123,6 +125,7 @@ class _MapPageState extends State<MapPage> {
               // given title for marker
               title: places[i].name,
               snippet: places[i].phone,
+              onTap: () => launch("tel://" + places[i].phone)
             ),
           )
       );
