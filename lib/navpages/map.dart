@@ -122,6 +122,7 @@ class _MapPageState extends State<MapPage> {
             infoWindow: InfoWindow(
               // given title for marker
               title: places[i].name,
+              snippet: places[i].phone,
             ),
           )
       );
